@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "focys-attendance",
+    "name": "FOCYS-Attendance",
     "slug": "focys-attendance",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,10 +13,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yourname.focysattendance",
+      "package": "com.varun.focysattendance",
       "intentFilters": [
         {
           "action": "VIEW",
@@ -33,11 +33,15 @@
               "pathPrefix": "/Pages/ResponsePage.aspx"
             }
           ],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ]
     },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
@@ -59,6 +63,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "bb89dddb-745c-455a-9367-8c9c64205e1b"
+      }
     }
   }
 }
