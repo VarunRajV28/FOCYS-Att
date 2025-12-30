@@ -68,14 +68,21 @@ export default function App() {
 
   const checkClipboard = async () => {
     if (currentUrl) return; 
+
     const content = await Clipboard.getStringAsync();
-    if (content && (content.includes('forms.office.com') || content.includes('forms.microsoft.com'))) {
+    const cleanContent = content.trim(); 
+
+    if (cleanContent && (
+        cleanContent.includes('forms.office.com') || 
+        cleanContent.includes('forms.microsoft.com') || 
+        cleanContent.includes('forms.cloud.microsoft')
+    )) {
       Alert.alert(
         "Link Detected",
         "Found a Forms link in your clipboard. Open it?",
         [
           { text: "No", style: "cancel" },
-          { text: "Yes", onPress: () => setCurrentUrl(content) }
+          { text: "Yes", onPress: () => setCurrentUrl(cleanContent) }
         ]
       );
     }

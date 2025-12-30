@@ -22,21 +22,11 @@
           "action": "VIEW",
           "autoVerify": true,
           "data": [
-            {
-              "scheme": "https",
-              "host": "forms.office.com",
-              "pathPrefix": "/r/"
-            },
-            {
-              "scheme": "https",
-              "host": "forms.office.com",
-              "pathPrefix": "/Pages/ResponsePage.aspx"
-            }
+            { "scheme": "https", "host": "forms.office.com", "pathPrefix": "/r/" },
+            { "scheme": "https", "host": "forms.office.com", "pathPrefix": "/Pages/ResponsePage.aspx" },
+            { "scheme": "https", "host": "forms.cloud.microsoft", "pathPrefix": "/r/" } 
           ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
+          "category": ["BROWSABLE", "DEFAULT"]
         }
       ]
     },
