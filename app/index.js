@@ -119,9 +119,28 @@ export default function App() {
         <Text style={styles.header}>Attendance Setup</Text>
         <Text style={styles.subtext}>Enter details once. We'll save them.</Text>
         
-        <TextInput style={styles.input} placeholder="Roll Number" value={details.roll} onChangeText={(t) => setDetails({...details, roll: t})} />
-        <TextInput style={styles.input} placeholder="Full Name" value={details.name} onChangeText={(t) => setDetails({...details, name: t})} />
-        <TextInput style={styles.input} placeholder="College Email" value={details.email} onChangeText={(t) => setDetails({...details, email: t})} />
+        <TextInput 
+          style={styles.input} 
+          placeholder="Enter Roll No here" 
+          placeholderTextColor="#999"
+          value={details.roll} 
+          onChangeText={(t) => setDetails({...details, roll: t})} 
+        />
+        <TextInput 
+          style={styles.input} 
+          placeholder="Name here" 
+          placeholderTextColor="#999"
+          value={details.name} 
+          onChangeText={(t) => setDetails({...details, name: t})} 
+        />
+        <TextInput 
+          style={styles.input} 
+          placeholder="College email here" 
+          placeholderTextColor="#999"
+          keyboardType="email-address"
+          value={details.email} 
+          onChangeText={(t) => setDetails({...details, email: t})} 
+        />
         
         <Button title="Save Details" onPress={saveDetails} />
       </SafeAreaView>
